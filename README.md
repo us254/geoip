@@ -20,27 +20,30 @@ The steps followed to create files like this are:
  The config.json file contains the following code:
 ```
 
-"input": [
-       {
-         "type": "text",
-         "action": "add",
-         "args": {
-           "name": "ir",
-           "uri": "https://raw.githubusercontent.com/us254/geoip/master/IRip.txt",
-           "onlyIPType": "ipv4"
-         }
-       }
-     ],
-     "output": [
-       {
-         "type": "v2rayGeoIPDat",
-         "action": "output",
-         "args": {
-           "outputName": "geoip.dat",
-           "wantedList": ["ir"]
-         }
-       }
-     ]
+{
+  "input": [
+    {
+      "type": "text",
+      "action": "add",
+      "args": {
+        "name": "ir",
+        "uri": "https://raw.githubusercontent.com/us254/geoip/master/IRip.txt",
+        "onlyIPType": "ipv4"
+      }
+    }
+  ],
+  "output": [
+    {
+      "type": "v2rayGeoIPDat",
+      "action": "output",
+      "args": {
+        "outputName": "geoip.dat",
+        "wantedList": [
+          "ir"
+        ]
+      }
+    }
+  ]
 }
 
 ```
