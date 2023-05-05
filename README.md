@@ -27,7 +27,7 @@ The steps followed to create files like this are:
       "action": "add",
       "args": {
         "name": "ir",
-        "uri": "https://raw.githubusercontent.com/us254/geoip/master/IRip.txt",
+        "uri": "https://raw.githubusercontent.com/us254/geoip/master/k/IRip.txt",
         "onlyIPType": "ipv4"
       }
     }
