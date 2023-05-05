@@ -13,6 +13,8 @@ The steps followed to create files like this are:
    -  `curl -sLo go.tar.gz https://go.dev/dl/go1.20.1.linux-amd64.tar.gz` 
    -  `tar -C /usr/local -xzf go.tar.gz` 
    -  `rm go.tar.gz` 
+   -   `export PATH=$PATH:/usr/local/go/bin`
+   -    `go version`
 2. Clone the geoip repository from GitHub by running the following command in the terminal:
    -  `git clone https://github.com/Loyalsoldier/geoip.git` 
 3. Navigate to the geoip directory by running the following command in the terminal:
