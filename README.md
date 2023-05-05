@@ -47,7 +47,7 @@ The steps followed to create files like this are:
 }
 
 ```
-The "uri": ` "https://raw.githubusercontent.com/us254/geoip/master/IRip.txt" ` line inside the config.json file points to the IRip.txt file that contains a list of Iran's IP addresses in CIDR format. This list can be obtained from the website ` https://www.ip2location.com/free/visitor-blocker `.
+The "uri": ` "https://raw.githubusercontent.com/us254/geoip/master/k/IRip.txt" ` line inside the config.json file points to the IRip.txt file that contains a list of Iran's IP addresses in CIDR format. This list can be obtained from the website ` https://www.ip2location.com/free/visitor-blocker `.
  Here are some examples of the CIDR codes from IRip.txt file:
 ```
  - 2.144.0.0/14
