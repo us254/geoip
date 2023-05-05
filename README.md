@@ -2,6 +2,12 @@ First, use the command 'curl' to download a file called 'go.tar.gz' which contai
  
 Next, download a file called 'config.json' from GitHub using the 'wget' command. This file contains a piece of code that includes a list of IPv4 addresses in Iran in CIDR format. You can find this list on the website 'ip2location.com' under 'visitor-blocker'. The code also specifies the file 'IRip.txt' which contains the list of addresses. Once the code is executed, the output file 'geoip.dat' will be created, which will contain information about the Iran IP addresses.
 
+```
+sudo apt-get update
+sudo apt-get install git
+git --version
+
+```
 The steps followed to create files like this are:
  1. Download the Go programming language by running the following commands in the terminal:
    -  `curl -sLo go.tar.gz https://go.dev/dl/go1.20.1.linux-amd64.tar.gz` 
