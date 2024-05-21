@@ -19,7 +19,7 @@
 #### Step 2: Install the Go Programming Language
 1. **Download the Go tarball:**
    ```bash
-   curl -sLo go.tar.gz https://go.dev/dl/go1.20.5.linux-amd64.tar.gz
+   curl -sLo go.tar.gz https://go.dev/dl/go1.22.linux-amd64.tar.gz
    ```
 2. **Extract the tarball to `/usr/local`:**
    ```bash
