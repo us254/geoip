@@ -1,60 +1,72 @@
-## Steps to Install Go Programming Language and Generate geoip.dat File
+Sure! Here is a step-by-step guide to install the Go programming language, clone the geoip repository, and generate the `geoip.dat` file using the provided configuration.
 
-First, use the command `curl` to download a file called `go.tar.gz` which contains the Go programming language. Then, extract the contents of the file to the directory `/usr/local`, and set the `PATH` environment variable to include the location of the Go executable. Check that the installation was successful by running the command `go version`.
+### Step-by-Step Guide
 
-Next, download a file called `config.json` from GitHub using the `wget` command. This file contains a piece of code that includes a list of IPv4 addresses in Iran in CIDR format. You can find this list on the website `ip2location.com` under 'visitor-blocker'. The code also specifies the file `IRip.txt` which contains the list of addresses. Once the code is executed, the output file `geoip.dat` will be created, which will contain information about the Iran IP addresses.
+#### Step 1: Update the System and Install Git
+1. **Update the package list:**
+   ```bash
+   sudo apt-get update
+   ```
+2. **Install Git:**
+   ```bash
+   sudo apt-get install git
+   ```
+3. **Verify Git installation:**
+   ```bash
+   git --version
+   ```
 
-```
-sudo apt-get update
-sudo apt-get install git
-git --version
-```
+#### Step 2: Install the Go Programming Language
+1. **Download the Go tarball:**
+   ```bash
+   curl -sLo go.tar.gz https://go.dev/dl/go1.20.5.linux-amd64.tar.gz
+   ```
+2. **Extract the tarball to `/usr/local`:**
+   ```bash
+   sudo tar -C /usr/local -xzf go.tar.gz
+   ```
+3. **Remove the tarball:**
+   ```bash
+   rm go.tar.gz
+   ```
+4. **Set the PATH environment variable:**
+   ```bash
+   export PATH=$PATH:/usr/local/go/bin
+   ```
+5. **Verify Go installation:**
+   ```bash
+   go version
+   ```
 
-The steps followed to create files like this are:
+#### Step 3: Clone the geoip Repository
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/us254/geoip.git
+   ```
+2. **Navigate to the geoip directory:**
+   ```bash
+   cd geoip
+   ```
 
-1. Download the Go programming language by running the following commands in the terminal:
+#### Step 4: Update the Configuration File
+1. **Remove the existing `config.json` file:**
+   ```bash
+   rm -f config.json
+   ```
+2. **Download the updated `config.json` file:**
+   ```bash
+   wget https://raw.githubusercontent.com/us254/geoip/master/config.json
+   ```
 
-```
-curl -sLo go.tar.gz https://go.dev/dl/go1.20.5.linux-amd64.tar.gz
-tar -C /usr/local -xzf go.tar.gz
-rm go.tar.gz
-export PATH=$PATH:/usr/local/go/bin
-go version
-```
+#### Step 5: Run the Go Program to Generate `geoip.dat`
+1. **Run the Go program:**
+   ```bash
+   go run .
+   ```
 
-2. Clone the geoip repository from GitHub by running the following command in the terminal:
-
-```
-git clone https://github.com/Loyalsoldier/geoip.git
-```
-
-3. Navigate to the geoip directory by running the following command in the terminal:
-
-```
-cd geoip
-```
-
-4. Remove the existing `config.json` file by running the following command in the terminal:
-
-```
-rm -f config.json
-```
-
-5. Download the updated `config.json` file from GitHub by running the following command in the terminal:
-
-```
-wget https://raw.githubusercontent.com/us254/geoip/master/config.json
-```
-
-6. Run the Go program in the terminal to generate the updated `geoip.dat` file:
-
-```
-go run .
-```
-
-The `config.json` file contains the following code:
-
-```
+### Configuration File (`config.json`)
+The `config.json` file should contain the following code:
+```json
 {
   "input": [
     {
@@ -82,11 +94,64 @@ The `config.json` file contains the following code:
 }
 ```
 
-The `"uri": "https://raw.githubusercontent.com/us254/geoip/master/k/IRip.txt"` line inside the `config.json` file points to the `IRip.txt` file that contains a list of Iran's IP addresses in CIDR format. This list can be obtained from the website https://www.ip2location.com/free/visitor-blocker. Here are some examples of the CIDR codes from `IRip.txt` file:
+### Summary
+1. **Update System and Install Git:**
+   ```bash
+   sudo apt-get update
+   sudo apt-get install git
+   git --version
+   ```
 
-- `2.144.0.0/14` (This block contains IP addresses from 2.144.0.0 to 2.147.255.255)
-- `2.176.0.0/12` (This block contains IP addresses from 2.176.0.0 to 2.191.255.255)
-- `5.1.43.0/24` (This block contains IP addresses from 5.1.43.0 to 5.1.43.255)
-- `5.22.0.0/17` (This block contains IP addresses from 5.22.0.0 to 5.23.255.255)
-- `5.22.192.0/21` (This block contains IP addresses from 5.22.192.0 to 5.22.207.255)
-- `5.22.200.0/22` (This block contains IP addresses from 5.22.200.0 to 5.22.203.255)
+2. **Install Go Programming Language:**
+   ```bash
+   curl -sLo go.tar.gz https://go.dev/dl/go1.20.5.linux-amd64.tar.gz
+   sudo tar -C /usr/local -xzf go.tar.gz
+   rm go.tar.gz
+   export PATH=$PATH:/usr/local/go/bin
+   go version
+   ```
+
+3. **Clone geoip Repository:**
+   ```bash
+   git clone https://github.com/us254/geoip.git
+   cd geoip
+   ```
+
+4. **Update Configuration File:**
+   ```bash
+   rm -f config.json
+   wget https://raw.githubusercontent.com/us254/geoip/master/config.json
+   ```
+
+5. **Generate `geoip.dat`:**
+   ```bash
+   go run .
+   ```
+
+### Example Commands
+```bash
+# Update System and Install Git
+sudo apt-get update
+sudo apt-get install git
+git --version
+
+# Install Go Programming Language
+curl -sLo go.tar.gz https://go.dev/dl/go1.20.5.linux-amd64.tar.gz
+sudo tar -C /usr/local -xzf go.tar.gz
+rm go.tar.gz
+export PATH=$PATH:/usr/local/go/bin
+go version
+
+# Clone geoip Repository
+git clone https://github.com/us254/geoip.git
+cd geoip
+
+# Update Configuration File
+rm -f config.json
+wget https://raw.githubusercontent.com/us254/geoip/master/config.json
+
+# Generate geoip.dat
+go run .
+```
+
+By following these steps, you can install the Go programming language, clone the geoip repository, update the configuration file, and generate the `geoip.dat` file.
