@@ -1,4 +1,4 @@
-Sure! Here is a step-by-step guide to install the Go programming language, clone the geoip repository, and generate the `geoip.dat` file using the provided configuration.
+ Here is a step-by-step guide to install the Go programming language, clone the geoip repository, and generate the `geoip.dat` file using the provided configuration.
 
 ### Step-by-Step Guide
 
